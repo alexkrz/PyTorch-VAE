@@ -1,18 +1,17 @@
-name: vae
 channels:
   - pytorch
   - nvidia
   - defaults
   - conda-forge
 dependencies:
-  - pip
+  - pip<24.1 # Lower version of pip needed to install pytorch-lightning
   - python=3.9.*
-  - pytorch=1.13.0=*cuda*
-  - cudatoolkit=11.7
-  - torchvision=0.14.0
+  - pytorch=1.13.*=*cuda*
+  - torchvision=0.14.*
   - pip:
-    - tensorboard==2.11.*
-    - torch-tb-profiler==0.4.1
-    - pytorch-lightning==1.5.6
-    - PyYAML==6.0
-    - torchsummary==1.5.1
+      - numpy<2.0 # Prefer to have numpy<2.0
+      - six==1.16.*
+      - pytorch-lightning==1.5.6
+      - tensorboard==2.11.*
+      - PyYAML==6.0
+      - torchsummary==1.5.1

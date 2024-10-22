@@ -1,10 +1,10 @@
+# IDE
+/.vscode/
 
-Data/
-logs/
+# Directories
+/data/
+/logs/
 
-VanillaVAE/version_0/
-
+# Artifacts
 __pycache__/
 .ipynb_checkpoints/
-
-Run.ipynb
